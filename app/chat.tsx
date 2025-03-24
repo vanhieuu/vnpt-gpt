@@ -150,7 +150,7 @@ const Chat: React.FC = () => {
         },
         {
           headers: {
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
             "Content-Type": "application/json",
           },
         }
