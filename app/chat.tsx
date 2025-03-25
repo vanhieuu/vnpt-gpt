@@ -4,6 +4,7 @@ import {
   TextInput,
   Image,
   StyleSheet,
+  Text,
 } from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -31,7 +32,7 @@ const Chat: React.FC = () => {
   const [inputMessage, setInputMessage] = useState<string>("");
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [isTyping, setIsTyping] = useState<boolean>(false);
-  const { colors } = useTheme();
+  const { colors, dark } = useTheme();
   const navigation = useNavigation();
   const { chat } = useLocalSearchParams();
 
@@ -204,15 +205,29 @@ const Chat: React.FC = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar style="auto" />
-      <ThemedView style={[styles.headerView,{backgroundColor:colors.background}]}>
+      <ThemedView
+        style={[styles.headerView, { backgroundColor: colors.background }]}
+      >
         <TouchableOpacity onPress={onPressBack}>
-          <Ionicons name="arrow-back" color="white" size={20} />
+          <Ionicons
+            name="arrow-back"
+            color={dark ? "white" : "black"}
+            size={20}
+          />
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonClear}
           onPress={() => setMessages([])}
         >
-          <ThemedText>Xóa tất cả</ThemedText>
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: "600",
+              color: colors.text,
+            }}
+          >
+            Xóa tất cả
+          </Text>
         </TouchableOpacity>
       </ThemedView>
       <GiftedChat

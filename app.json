@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "vnpt-gpt",
-    "slug": "vnpt-gpt",
+    "name": "vnpt-chatbot",
+    "slug": "vnpt-chatbot",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vnptmedia.android.vnpt-gpt"
+      "bundleIdentifier": "com.vnptmedia.android.vnpt-chatbot"
     },
     "android": {
       "adaptiveIcon": {

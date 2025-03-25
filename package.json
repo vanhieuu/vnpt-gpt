@@ -1,5 +1,5 @@
 {
-  "name": "vnpt-gpt",
+  "name": "vnpt-chatbot",
   "main": "expo-router/entry",
   "version": "1.0.2",
   "scripts": {

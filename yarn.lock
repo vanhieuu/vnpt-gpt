@@ -10048,9 +10048,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vnpt-gpt@workspace:.":
+"vnpt-chatbot@workspace:.":
   version: 0.0.0-use.local
-  resolution: "vnpt-gpt@workspace:."
+  resolution: "vnpt-chatbot@workspace:."
   dependencies:
     "@babel/core": ^7.25.2
     "@expo/vector-icons": ^14.0.2
